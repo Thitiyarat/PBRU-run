@@ -28,10 +28,10 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:layout_below="@+id/textView"
-        android:layout_above="@+id/button3"
-        android:layout_margin="15dp">
+        android:padding="11dp">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -41,7 +41,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text=" Name:"
                 android:id="@+id/textView2"
                 android:layout_weight="1"
                 android:textSize="@dimen/h2" />
@@ -61,7 +61,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="User:"
                 android:id="@+id/textView3"
                 android:layout_weight="1"
                 android:textSize="@dimen/h2" />
@@ -81,7 +81,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Password:"
                 android:id="@+id/textView4"
                 android:layout_weight="1"
                 android:textSize="@dimen/h2" />
@@ -92,5 +92,96 @@
                 android:id="@+id/editText3"
                 android:layout_weight="2" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avata"
+            android:id="@+id/textView5"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_weight="1"
+                android:src="@drawable/bird48" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:layout_weight="1"
+                android:src="@drawable/doremon48" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:layout_weight="1"
+                android:src="@drawable/kon48" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:layout_weight="1"
+                android:src="@drawable/nobita48" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:layout_weight="1"
+                android:src="@drawable/rat48" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ragAvata"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton2"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton3"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton4"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton5"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp" />
+        </RadioGroup>
     </LinearLayout>
 </RelativeLayout>
