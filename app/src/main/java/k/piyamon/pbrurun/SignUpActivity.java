@@ -103,17 +103,17 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void uploadValueToServer() {
 
-        Log.d("pbruV1","name ==> " + nameString);
-        Log.d("pbruV1","name ==> " + userString);
-        Log.d("pbruV1","name ==> " + passwordString);
-        Log.d("pbruV1","name ==> " + Integer.toString(indexAnInt));
+        Log.d("pbruV1", "name ==> " + nameString);
+        Log.d("pbruV1", "user ==> " + userString);
+        Log.d("pbruV1", "pass ==> " + passwordString);
+        Log.d("pbruV1", "avata ==> " + Integer.toString(indexAnInt));
 
         OkHttpClient okHttpClient = new OkHttpClient();
         RequestBody requestBody = new FormEncodingBuilder()
                 .add("isAdd", "true")
                 .add("Name", nameString)
                 .add("User", userString)
-                .add("password",passwordString)
+                .add("Password", passwordString)
                 .add("Avata", Integer.toString(indexAnInt))
                 .add("Lat", "0")
                 .add("Lng", "0")
