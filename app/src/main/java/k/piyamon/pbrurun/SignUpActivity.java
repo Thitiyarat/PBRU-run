@@ -9,6 +9,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.FormEncodingBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+
+import java.io.IOException;
+
 public class SignUpActivity extends AppCompatActivity {
 
     //Explicit
@@ -91,13 +101,38 @@ public class SignUpActivity extends AppCompatActivity {
 
    } // clinkSign
 
-
     private void uploadValueToServer() {
 
         Log.d("pbruV1","name ==> " + nameString);
         Log.d("pbruV1","name ==> " + userString);
         Log.d("pbruV1","name ==> " + passwordString);
         Log.d("pbruV1","name ==> " + Integer.toString(indexAnInt));
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+        RequestBody requestBody = new FormEncodingBuilder()
+                .add("isAdd", "true")
+                .add("Name", nameString)
+                .add("User", userString)
+                .add("password",passwordString)
+                .add("Avata", Integer.toString(indexAnInt))
+                .add("Lat", "0")
+                .add("Lng", "0")
+                .add("Gold", "0")
+                .build();
+        Request.Builder builder = new Request.Builder();
+        Request request = builder.url("http://swiftcodingthai.com/pbru3/add_user_master.php").post(requestBody).build();
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Request request, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Response response) throws IOException {
+                finish();
+            }
+        });
 
 
     }// upload
